@@ -1,3 +1,79 @@
-html {
-  background-color: red;
+/* When linking an external stylesheet to an HTML file, you want to make sure to use the proper tags (we used something like <link type= "html/css" rel= 'stylesheet" href= "filename.css">). You want to place this link tag in the <head></head> part of the HTML document.
+
+As far as positioning, I split the main content into two unordered lists. Using the "float" and "margin-left" property on the left-hand list, and the "margin-left" as well on the right-hand list, I was able to get the text to line up as I liked. In addition, we were able to use "display:block" to create line breaks in the page heading - it was cool to see how conveniently this worked out. It took quite some time to get the site as I wanted, and I ended up working on it for at least another hour after my pairing session was over. However, the time was well worth it as I now have a much better understanding of how some of these CSS properties work.
+
+To modify the element style, we used the color, background-color, font-size, and font-weight properties - these were all pretty straightforward, compared to the positioning aspect of the challenge.
+
+We used classes (to create horizontal lines without HTML) and IDs (for the two separate unordered lists). My main thought process when using these selectors is to figure out ways to avoid repetition in my HTML.
+
+Ultimately, I think our site follows best practices, more so than the actual Berkshire Hathaway site, which used no CSS - just a table, formatted and styled entirely using HTML. Our code will be easier to modify in the future, and we could potentially reuse some of our CSS for other sites.*/
+
+body {
+  color: #000080;
+  background-color: #ffffff;
 }
+
+a {
+  color: #800080;
+}
+
+a:visited {
+  color: #ff0000;
+}
+
+span {
+  display: block;
+  font-size: 0.75em;
+  color: #000080;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+h1 span {
+  display: block;
+}
+
+h1 span span {
+  display: inline;
+  font-size: 2.5em;
+}
+
+img {
+  width:75px;
+  height:15px;
+  margin:auto;
+  display: block;
+  padding-top: 15px;
+  }
+
+  #geico {
+    font-size: 0.65em;
+    text-align: center;
+
+  }
+
+  .horizontal {
+     height: 3px;
+     background-color: #fff;
+     border-bottom: solid #CCCCCC;
+     border-bottom-width: 1px;
+     width: 100%;
+}
+
+li {
+  height: 54px;
+}
+
+#left-list {
+float:left;
+margin-left: 1em;
+}
+
+#right-list {
+margin-left: 50%;
+}
+

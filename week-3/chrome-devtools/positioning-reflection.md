@@ -1,12 +1,12 @@
-![Exercise 1](.Ex1.png)
-[Exercise 2](./Ex2.png)
-[Exercise 3](./Ex3.png)
-![Exercise 4](./Ex4.jpg)
-![Exercise 5](./Ex5.jpg)
-![Exercise 6](./Ex6.jpg)
-![Exercise 7](./Ex7.jpg)
-![Exercise 8](./Ex8.jpg)
-![Exercise 9](./Ex9.jpg)
+![Exercise 1](imgs/Ex1.png)
+[Exercise 2](imgs/Ex2.png)
+[Exercise 3](imgs/Ex3.png)
+![Exercise 4](imgs/Ex4.jpg)
+![Exercise 5](imgs/Ex5.jpg)
+![Exercise 6](imgs/Ex6.jpg)
+![Exercise 7](imgs/Ex7.jpg)
+![Exercise 8](imgs/Ex8.jpg)
+![Exercise 9](imgs/Ex9.jpg)
 
 Chrome's DevTools inspector is very useful for formatting or positioning elements. You can inspect each HTML element individually and see which CSS properties are being applied to it - then, you can turn these properties on or off (or otherwise change them) to see how the result would then change. I found this very effective while using trial and error to format and position the various DIVs.
 

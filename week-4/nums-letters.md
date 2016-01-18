@@ -14,7 +14,7 @@ minutes_in_decade = minutes_in_hour * hours_in_year * years_in_decade
 
 p "There are #{hours_in_year} hours in a year."
 p "There are #{minutes_in_decade} minutes in a decade (disregarding leap years)."
-'''
+```
 
 Ruby handles addition, subtraction, multiplication, and division, in a manner similar to a traditional calculator. The only major difference here would be that when dividing one integer by another, Ruby will round down from the exact result and return the nearest integer (For example - 10/3 would return 3).
 

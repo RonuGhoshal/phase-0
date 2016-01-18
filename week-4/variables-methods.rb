@@ -28,5 +28,11 @@ puts "How about #{fav_number.to_i + 1}? Isn't that a bigger and better favorite 
 
 #Nothing about this material has been confusing so far, the only thing I was uncertain about was how to easily copy a directory from Github to my local machine. Is it possible to easily copy a single directory without cloning the entire repository?
 
+#Links to exercises:
 
+#Format Address: https://github.com/RonuGhoshal/phase-0/blob/master/week-4/address/my_solution.rb
+
+#Define Method: https://github.com/RonuGhoshal/phase-0/blob/master/week-4/define-method/my_solution.rb
+
+#Math Methods: https://github.com/RonuGhoshal/phase-0/blob/master/week-4/math/my_solution.rb
 

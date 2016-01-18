@@ -25,3 +25,11 @@ A string is a group of letters (and some other characters) in a program. You cou
 A local variable is a variable specific to a particular program. You would use local variables when you don't want them to be accessible from outside that program.
 
 This challenge was a good review - I've done the RubyMonk and CodeAcademy tracks several time so there wasn't anything new here, but it was some nice practice with the basics.
+
+Links to exercises:
+
+Defining Variables: https://github.com/RonuGhoshal/phase-0/blob/master/week-4/defining-variables.rb
+
+Simple String: https://github.com/RonuGhoshal/phase-0/blob/master/week-4/simple-string.rb
+
+Basic Math: https://github.com/RonuGhoshal/phase-0/blob/master/week-4/basic-math.rb

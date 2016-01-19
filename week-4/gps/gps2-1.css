@@ -1,0 +1,26 @@
+header  {
+  background-color: blue;
+}
+
+header p {
+  background-color: #00FFFF;
+}
+
+.column-1{
+  float: left;
+  width:45%;
+  background-color: green;
+  margin: 2%;
+}
+
+.column-2{
+  float: right;
+  width:45%;
+  background-color: red;
+  margin: 2%;
+}
+
+footer {
+  background-color: #A9A9A9;
+  clear: both;
+}

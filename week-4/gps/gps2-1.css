@@ -1,26 +1,31 @@
-header  {
+header h1  {
+  margin: 0;
+  padding: 20px 10px 20px 10px;
   background-color: blue;
+  font-family: Courier;
 }
 
 header p {
+  padding: 20px 10px 20px 10px;
+  margin: 0;
   background-color: #00FFFF;
+
 }
 
 .column-1{
   float: left;
   width:45%;
-  background-color: green;
   margin: 2%;
 }
 
 .column-2{
   float: right;
   width:45%;
-  background-color: red;
   margin: 2%;
 }
 
 footer {
-  background-color: #A9A9A9;
+  padding-top: 50px;
+  background-color: #00FFFF;
   clear: both;
 }

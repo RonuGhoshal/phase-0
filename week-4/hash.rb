@@ -7,8 +7,10 @@
 # my_info is empty to start.  Edit this!
 my_info = { :first_name => "Ronu", :last_name => "Ghoshal", :hometown => "Des Plaines", :age => 30 }
 
-
-
+puts my_info[:first_name]
+puts my_info[:last_name]
+puts my_info[:hometown]
+puts my_info[:age]
 
 
 # RSpec Tests. They are included in this file because the local variables you are creating are not accessible across files. If we try to run these files as a separate file per normal operation, the local variable checks will return nil.

@@ -48,4 +48,13 @@ def create_groups(list_of_names)
   groups
 end
 
-p create_groups(my_cohort)
+
+
+#Release 3
+# In this case, the program would give us the same outputs 3 times in a row. If we wanted it to return different outputs, we could use "list_of_names.shuffle" at the beginning of the program.
+# I don't see a reason for this program to store past outputs - however, if we wanted to store the output, we could declare a variable outside the method like so: "output = create_groups(my_cohort"
+# If one person were to leave the cohort, we could run the program again and it would rearrange the groups so that they still had 4 or 5 people per group (assuming more than 7 people in cohort).
+# We are done once every accountability group has 4, 5 (or in a few cases, 3) people.
+
+#Refactored Solution:
+

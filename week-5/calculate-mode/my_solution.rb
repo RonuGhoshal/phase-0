@@ -1,8 +1,8 @@
 # Calculate the mode Pairing Challenge
 
-# I worked on this challenge [by myself, with: ]
+# I worked on this challenge with Luis Ybarra
 
-# I spent [] hours on this challenge.
+# I spent 1 hour on this challenge.
 
 # Complete each step below according to the challenge directions and
 # include it in this file. Also make sure everything that isn't code

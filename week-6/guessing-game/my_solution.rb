@@ -1,8 +1,8 @@
 # Build a simple guessing game
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge [by myself]
+# I spent 1 hour on this challenge.
 
 # Pseudocode
 #  DEFINE guess method(accept one argument -also an integer. let's call it guess)

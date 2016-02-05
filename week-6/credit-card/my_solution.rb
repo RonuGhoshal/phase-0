@@ -1,8 +1,8 @@
 # Class Warfare, Validate a Credit Card Number
 
 
-# I worked on this challenge [by myself, with: ].
-# I spent [#] hours on this challenge.
+# I worked on this challenge with Alyssa Ransbury
+# I spent 1.5 hours on this challenge.
 
 # Pseudocode
 
@@ -117,4 +117,17 @@ class CreditCard
   end
 
 end
+
+# Release 5: Reflection
+
+# I would say that the most difficult aspect of this was trying to determine whether to use destructive
+# or non-destructive methods. In our original code, we settled on making a new array (non-destructive)
+# for the double_array method - however, we were able to refactor using map! (destructive).
+
+# The new thing here to me was using both .map! and .with_index together. I was familiar with
+# .each_with_index but didn't realize .map!.with_index would be so easy to use.
+
+# Other than this new combination of methods, this solidified my understanding of when to
+# call a method from within another method.
+
 

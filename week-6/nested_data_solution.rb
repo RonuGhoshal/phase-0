@@ -1,4 +1,4 @@
-# RELEASE
+# RELEASE 2: NESTED STRUCTURE GOLF
 # Hole 1
 # Target element: "FORE"
 

@@ -20,34 +20,33 @@ class RPNCalculator
   def evaluate(input)
     @symbols = ["+", "-", "*"]
     @array = input.split(' ')
-    @array.each_with_index do |x, index|
-      if @symbols.include?(x)
-      if x == "+"
-      @sum = add(@array[index - 2], @array[index - 1])
-      (@array[index - 2], @array[index - 1]) = @sum
-
-      p @array
+    while @array.length > 1
+      @array.each_with_index do |x, i|
+        if @symbols.include?(x)
+          @result = calculate(@array[i-2], @array[i-1], x)
+          @array.slice!(i-2..i)
+          @array.insert((i-2), @result)
+          break
+        end
       end
     end
-  end
-    end
-
-  def subtract(a, b)
-    return (a - b).to_i
+    @array.join.to_i
   end
 
-  def add(a, b)
-    (a.to_i + b.to_i)
-  end
-
-  def multiply(a, b)
-    return (a * b).to_i
+  def calculate(a, b, method)
+    a = a.to_i
+    b = b.to_i
+    case method
+      when "+"
+        a + b
+      when "-"
+        a - b
+      when "*"
+        a * b
+      end
   end
 
 end
-
-rpn =  RPNCalculator.new
-rpn.evaluate("70 10 4 + 5 * -")
 
 # 4. Refactored Solution
 

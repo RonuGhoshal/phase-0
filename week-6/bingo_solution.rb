@@ -1,6 +1,6 @@
 # A Nested Array to Model a Bingo Board SOLO CHALLENGE
 
-# I spent [#] hours on this challenge.
+# I spent 4 hours on this challenge.
 
 
 # Release 0: Pseudocode
@@ -22,12 +22,6 @@
 #     END
 #    END
 # END
-
-# Display a column to the console
-  #fill in the outline here
-
-# Display the board to the console (prettily)
-  #fill in the outline here
 
 # Initial Solution
 =begin
@@ -146,3 +140,28 @@ end
 
 
 #Reflection
+=begin
+
+Pseudocoding this exercise was very helpful - it helped me figure out how I wanted to approach the
+problem. Then, when I ran into some errors, it helped me think my way through it.
+
+The benefits of using a class here are that you can create new instances of the Bingo Board,
+modifying the board when necessary (replacing numbers with "x.")
+
+There are a few ways you can access elements in a nested array - one would be by using indexes
+for each dimension - like: array[first_index][second_index]. You could also iterate through the array
+using .each (like I did here) - and then perform a certain action on each element in the first dimension
+(in this case, check to see if the nth column contains a given number).
+
+I used simple .each iteration to go through the array, and used array[index] to modify elements. I had a hard
+time thinking of any other methods that would be valuable in this exercise. I did try using "map" but it seemed
+like it would not be effective in my check_number method.
+
+To determine whether to use an instance variable or a local variable, think about when you would want to
+access that variable. If you only want it to be accessible from within its method, make it a local variable. Otherwise,
+if you'd like to be able to access it in any instance of a given class, use an instance variable.
+
+I had difficulty with refactoring here but I think using a case/when rather than if/else statement helped
+clean up my code a bit.
+
+=end

@@ -1,65 +1,57 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge with Michael London
+# We spent 1+ hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
-require_relative 'state_data'
+   require_relative 'state_data'
+# require_relative loads the library RELATIVE to the file we are currently in
+
+# require can be used to load Ruby modules, etc... using absolute path
 
 class VirusPredictor
 
+  # Creates a new object and accepts three arguments, assigns each argument to its own instance variable - each variable can be used throughout the class.
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+  # Calls the two private methods, passes in the instance variables from the initialize method.
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
-  private
+private
 
-  def predicted_deaths(population_density, population, state)
+  # Determines number_of_deaths based on the population and population density
+  def predicted_deaths
     # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
+    case @population_density
+    when @population_density >= 200 then number_of_deaths = (@population * 0.4).floor
+    when  @population_density >= 150 then number_of_deaths = (@population * 0.3).floor
+    when @population_density >= 100 then number_of_deaths = (@population * 0.2).floor
+    when @population_density >= 50 then number_of_deaths = (@population * 0.1).floor
+    when @population_density < 50 then number_of_deaths = (@population * 0.05).floor
     end
-
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
-
   end
 
-  def speed_of_spread(population_density, state) #in months
+  # Determines how many months it will take to spread across the country in relation to population density.
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
-    speed = 0.0
-
-    if @population_density >= 200
-      speed += 0.5
-    elsif @population_density >= 150
-      speed += 1
-    elsif @population_density >= 100
-      speed += 1.5
-    elsif @population_density >= 50
-      speed += 2
-    else
-      speed += 2.5
+    months_to_spread = 0.0
+    case @population_density
+    when @population_density >= 200 then months_to_spread  += 0.5
+    when @population_density >= 150 then months_to_spread += 1
+    when @population_density >= 100 then months_to_spread += 1.5
+    when @population_density >= 50 then months_to_spread += 2
+    when @population_density < 50 then months_to_spread += 2.5
     end
-
-    puts " and will spread across the state in #{speed} months.\n\n"
-
+    puts " and will spread across the state in #{months_to_spread} months.\n\n"
   end
 
 end
@@ -69,19 +61,42 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
+STATE_DATA.each do |state, data|
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
+state_name = VirusPredictor.new(state, data[:population_density], data[:population])
+state_name.virus_effects
 
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+end
 
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
 
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
+
+# jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
+# jersey.virus_effects
+
+# california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
+# california.virus_effects
+
+# alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
+# alaska.virus_effects
 
 
 #=======================================================================
 # Reflection Section
+=begin
+The difference between the two hash syntaxes is that one uses a string, while
+the other uses symbols. Symbols are preferred when you want them to be unchangeable,
+they also use less memory.
+
+"Require relative" loads a file (can be specs, modules, etc) RELATIVE to the path of the current
+file we are in. "Require" would use the absolute path.
+
+The way I generally find myself iterating through a hash is by using .each do |key, value| -
+
+When refactoring virus_effects, we were able to remove the instance variables. This is because
+we can already access these variables throughout the class and do not need to pass them into
+a method.
+
+This exercise gave me much-needed practice on accessing instance variables throughout a
+method, and sending data between different methods in a Class.
+
+=end

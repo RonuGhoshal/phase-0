@@ -37,11 +37,11 @@ adam.children = terah.children;
 // __________________________________________
 // Reflection: Use the reflection guidelines
 //
-//
-//
-//
-//
-//
+// On this exercise I was able to get the tests to pass without much trouble.
+// It was fairly easy to add and delete properties from outside the object itself.
+// The main thing I noticed here is that you can easily add, delete and change object
+// values from outside the object. Also, the Terminal displays certain values as
+// [Object] and [Circular], I would like to learn more about that.
 
 
 // __________________________________________

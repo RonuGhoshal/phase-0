@@ -1,13 +1,8 @@
  // JavaScript Olympics
 
-// I paired [by myself, with:] on this challenge.
+// I paired with Maeve Tierney on this challenge.
 
-// This challenge took me [#] hours.
-
-
-// Warm Up
-
-
+// This challenge took me 1.5 hours.
 
 
 // Bulk Up
@@ -67,3 +62,9 @@ console.log(michaelPhelps.constructor === Athlete)
 console.log(michaelPhelps.name + michaelPhelps.age + michaelPhelps.sport + " " + michaelPhelps.quote)
 
 // Reflection
+
+// This exercise helped solidify the JavaScript syntax, and introduced the concept of Constructor functions.
+// A constructor function is a way of creating a "type of object" - it can also hold properties that will be
+// used across any type of this object.
+// While similar to ruby classes, there are some differences. In JavaScript, any function can potentially
+// be a constructor function as there is no special syntax for creating one.

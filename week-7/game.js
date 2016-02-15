@@ -152,11 +152,14 @@ alert("Thank you for playing.")
 
 
 // Reflection
+// The most difficult part here was probably trying to structure my program into objects and functions. It took some work
+// to determine what statements should go into which function. Also, I wasn't able to get prompt to work in my Terminal,
+// with node, however, this did run perfectly on the website js.do.
 //
+// I learned the importance of scope in regards to variables - I realized that if I want to access a variable
+// outside a function then I need to declare it outside the function (globally)
 //
-//
-//
-//
-//
-//
-//
+// This exercise also helped me learn about the Math.random() method although I am still getting the hang of it.
+
+// You can access and manipulate the properties of objects by writing functions that modify them (with bracket
+// or dot notation, depending on the particular case).

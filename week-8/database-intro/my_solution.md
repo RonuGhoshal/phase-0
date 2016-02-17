@@ -10,3 +10,21 @@
 10: SELECT regions.region_name, states.state_name FROM regions INNER JOIN states ON regions.id=states.region_id;
 
 ![alt text](outfits.png "Logo Title Text 1")
+
+Reflection:
+Databases are used to organize, store, and categorize data (often in large quantities).
+
+A one-to-many relationship can best be explained as a relationship between two
+elements where element A belongs to ONE of element B, and element B has
+MANY of element A.
+
+A primary key is a field in a table that uniquely identifies each row in the table.
+Each table can only have one primary key, while a foreign key is a field in one
+table that points to the primary
+key of another table.
+
+You can select information from SQL databases using the appropriate keywords
+like SELECT, FROM, GROUP BY, ORDER BY, ASC, DESC. Some good guidlines:
+It's a good idea to use "SELECT * FROM" when you want to select all elements,
+also you can use % as a wildcard character, and WHERE is a good keyword for
+stating the conditions that you want to select from.

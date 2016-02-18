@@ -214,12 +214,20 @@ for (var office in voteCount) {
 
 // __________________________________________
 // Reflection
+/*
+This exercise was a tough one but was good practice in iterating over nested objects.
+I learned that to iterate over a nested object, you may need to use a nested for loop, and
+to be very careful with the syntax so as to correctly refer to a property or that property's
+value.
+
+The Math.max.apply method was very useful in solving this.
+
+Overall this challenge just solidified my understanding of how to access nested objects
+and pass data between nested structures.
 
 
 
-
-
-
+*/
 // __________________________________________
 // Test Code:  Do not alter code below this line.
 

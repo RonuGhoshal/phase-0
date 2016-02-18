@@ -1,7 +1,7 @@
 /*
 Gradebook from Names and Scores
-I worked on this challenge [by myself, with:]
-This challenge took me [#] hours.
+I worked on this challenge with Bethelhem
+This challenge took me 0.5 hours
 You will work with the following two variables.  The first, students, holds the names of four students.
 The second, scores, holds groups of test scores.  The relative positions of elements within the two
 variables match (i.e., 'Joseph' is the first element in students; his scores are the first value in scores.).
@@ -17,6 +17,7 @@ var scores = [ [80, 70, 70, 100],
 
 // __________________________________________
 // Write your code below.
+/*
 var gradebook = new Object();
 
 gradebook["Joseph"]= new Object();
@@ -47,27 +48,49 @@ var average = function(array){
 
 console.log(gradebook);
 
-
+*/
 // __________________________________________
 // Refactored Solution
 
+var gradebook = new Object();
 
+for (var x in students) {
+  gradebook[students[x]] = {};
+  gradebook[students[x]].testScores = scores[x];
+}
 
+gradebook.addScore = function(name,score){
+  gradebook[name].testScores.push(score);
+};
 
+gradebook.getAverage = function(name){
+  return average(gradebook[name].testScores);
+};
 
+function average(array) {
+  var sum = 0;
+  for (var i in array) {
+    sum += array[i];
+  }
+  return (sum/array.length);
+};
 
-
+console.log(gradebook);
 
 // __________________________________________
 // Reflect
 
+/*
+In this exercise we got good practice adding functions to objects. I learned the
+proper syntax for doing so. From what I can see here, it appears that these
+functions must be function expressions rather than function declarations.
 
+We used a for loop to iterate over the array. In my refactored solution I was able
+to iterate over the nested array using a for loop and bracket notation (with brackets nested inside brackets).
 
+On this particular exercise, I did not use any new methods.
 
-
-
-
-
+*/
 
 // __________________________________________
 // Test Code:  Do not alter code below this line.

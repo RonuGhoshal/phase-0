@@ -203,11 +203,9 @@ for (var office in voteCount) {
   for (var x in (voteCount[office])) {
     array.push(voteCount[office][x]);
     var winning_votes = Math.max.apply(null, array);
-    for (var candidate in (voteCount[office])) {
-      if (voteCount[office][candidate] == winning_votes) {
-        officers[office] = candidate;
+      if (voteCount[office][x] == winning_votes) {
+        officers[office] = x;
       }
-    }
   }
 }
 

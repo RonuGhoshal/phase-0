@@ -9,6 +9,7 @@ class Drawer
 
   attr_reader :contents
 
+
   # Are there any more methods needed in this class?
 
   def initialize
@@ -40,11 +41,15 @@ class Drawer
   def view_contents
     puts "The drawer contains:"
     @contents.each {|silverware| puts "- " + silverware.type }
+    if @contents == []
+      puts "nothing - the drawer is empty."
+    end
   end
 end
 
 class Silverware
   attr_reader :type
+  attr_reader :clean
 
   # Are there any more methods needed in this class?
 
@@ -61,6 +66,7 @@ class Silverware
   def clean_silverware
     @clean = true
   end
+
 
 end
 
@@ -103,9 +109,15 @@ puts spoon.clean #=> this should be false
 
 # DRIVER TESTS GO BELOW THIS LINE
 
-
-
-
+silverware_drawer.view_contents
+silverware_drawer.add_item(spoon)
+silverware_drawer.add_item(spoon)
+silverware_drawer.view_contents
 
 
 # Reflection
+
+# This exercise helped solidify my understanding of classes, instance methods,
+# instance variables, and reader/writer methods. I still feel a bit unclear on when
+# it may be a good idea to use writer methods, so I plan to study this further before
+# phase 1.

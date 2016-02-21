@@ -1,5 +1,5 @@
 ![alt text](imgs/one-to-one.png "One to One")
-![alt text](imgs/many-to-manypng "Many to Many")
+![alt text](imgs/many-to-many.png "Many to Many")
 
 A one-to one database is a database consisting of two categories that have
 a single relationship to each other. You would want to use this when category A

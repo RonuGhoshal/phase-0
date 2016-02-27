@@ -34,7 +34,6 @@ function evaluate(string) {
         var replace = calculate(array[x-2], array[x-1], array[x]);
         array.splice((x-2), 3, replace);
         break;
-
       }
     }
   }
@@ -70,3 +69,18 @@ rpn = new RPNCalculator;
 console.log(rpn.evaluate('70 10 4 + 5 * -'));
 console.log(rpn.evaluate("0 1 -"));
 
+/*Reflection
+I looked through this quite a bit but really could not think of any refactoring
+ideas that would make the code cleaner.
+
+This solidified my understanding of constructor functions and how they are
+similar/different from Ruby classes. The most difficult part of this was definitely
+trying to get the syntax right for my constructor function. I still am uncertain
+as to how prototypes could play in here.
+
+I solved the problem in basically the same way - my pseudocode was just about
+the same as for the Ruby version.
+
+
+
+*/
